@@ -157,27 +157,44 @@
       }
     },
     {
-      "name": "heatmap",
+      "name": "uptime-monitor",
       "type": "registry:block",
-      "title": "Heatmap",
-      "description": "Globe-projected heatmap visualizing earthquake density with zoom-dependent styling.",
-      "dependencies": [],
+      "title": "Uptime Monitor",
+      "description": "Status-page style map of edge network locations with live health, latency, and uptime.",
+      "dependencies": [
+        "maplibre-gl"
+      ],
       "registryDependencies": [
         "@mapcn/map"
       ],
       "files": [
         {
-          "path": "src/registry/blocks/heatmap/page.tsx",
+          "path": "src/registry/blocks/uptime-monitor/page.tsx",
           "type": "registry:page",
-          "target": "app/heatmap/page.tsx"
+          "target": "app/uptime-monitor/page.tsx"
+        },
+        {
+          "path": "src/registry/blocks/uptime-monitor/data.ts",
+          "type": "registry:component",
+          "target": "app/uptime-monitor/data.ts"
+        },
+        {
+          "path": "src/registry/blocks/uptime-monitor/components/edge-node-marker.tsx",
+          "type": "registry:component",
+          "target": "app/uptime-monitor/components/edge-node-marker.tsx"
+        },
+        {
+          "path": "src/registry/blocks/uptime-monitor/components/status-sidebar.tsx",
+          "type": "registry:component",
+          "target": "app/uptime-monitor/components/status-sidebar.tsx"
         }
       ],
       "categories": [
-        "visualization",
-        "heatmap"
+        "monitoring",
+        "status"
       ],
       "meta": {
-        "iframeHeight": "800px"
+        "iframeHeight": "720px"
       }
     },
     {
@@ -261,6 +278,30 @@
       "categories": [
         "store-locator",
         "locator"
+      ],
+      "meta": {
+        "iframeHeight": "800px"
+      }
+    },
+    {
+      "name": "heatmap",
+      "type": "registry:block",
+      "title": "Heatmap",
+      "description": "Globe-projected heatmap visualizing earthquake density with zoom-dependent styling.",
+      "dependencies": [],
+      "registryDependencies": [
+        "@mapcn/map"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/heatmap/page.tsx",
+          "type": "registry:page",
+          "target": "app/heatmap/page.tsx"
+        }
+      ],
+      "categories": [
+        "visualization",
+        "heatmap"
       ],
       "meta": {
         "iframeHeight": "800px"

@@ -11,4 +11,5 @@ export const blockComponents: Record<
   "logistics-network": React.lazy(() => import("./logistics-network/page")),
   "store-locator": React.lazy(() => import("./store-locator/page")),
   choropleth: React.lazy(() => import("./choropleth/page")),
+  "uptime-monitor": React.lazy(() => import("./uptime-monitor/page")),
 };
